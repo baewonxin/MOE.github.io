@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>وزارة التربية العراقية · قاعدة التدريسيين</title>
-    <!-- Google Fonts (Cairo + modern sans) -->
+    <!-- Google Fonts (Cairo + Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (free) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -19,69 +19,59 @@
 
         body {
             font-family: 'Cairo', 'Inter', sans-serif;
-            background: linear-gradient(145deg, #f0f4f8 0%, #e9eff5 100%);
+            background: linear-gradient(145deg, #f0f4f8 0%, #e4ecf5 100%);
             min-height: 100vh;
-            color: #162b3a;
+            color: #132e40;
             line-height: 1.6;
             padding: 20px;
         }
 
-        /* professional cards & containers */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 40px;
-            box-shadow: 0 25px 50px -10px rgba(0, 40, 60, 0.25);
-        }
-
         .container {
-            max-width: 1400px;
+            max-width: 1500px;
             margin: 0 auto;
         }
 
-        /* ===== START PAGE STYLES (visible by default) ===== */
+        /* ===== START PAGE STYLES ===== */
         #start-page {
             display: block;
-            animation: fadeSlideUp 0.8s ease;
+            animation: fadeSlide 0.8s ease;
         }
 
         #data-page {
             display: none;
-            animation: fadeSlideUp 0.8s ease;
+            animation: fadeSlide 0.8s ease;
         }
 
-        @keyframes fadeSlideUp {
-            0% { opacity: 0; transform: translateY(18px); }
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(15px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* header & nav */
+        /* header */
         .iraq-header {
             background: #0f2b3f;
             color: white;
-            border-radius: 60px 60px 30px 30px;
-            padding: 2rem 2.5rem;
+            border-radius: 50px 50px 30px 30px;
+            padding: 1.8rem 2.5rem;
             margin-bottom: 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 25px;
-            box-shadow: 0 15px 30px -10px #0a1e2b;
+            gap: 20px;
+            box-shadow: 0 18px 35px -12px #0a1e2b;
             border: 1px solid #3d627c;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 18px;
         }
 
         .logo-icon {
             font-size: 3rem;
-            color: #ffd966;
+            color: #ffda7a;
             filter: drop-shadow(0 4px 6px #00000033);
         }
 
@@ -103,7 +93,7 @@
             border: 1.5px solid #7899b3;
             color: white;
             padding: 14px 38px;
-            border-radius: 50px;
+            border-radius: 60px;
             font-size: 1.3rem;
             font-weight: 600;
             cursor: pointer;
@@ -114,21 +104,15 @@
             backdrop-filter: blur(5px);
         }
 
-        .nav-button i {
-            font-size: 1.5rem;
-        }
-
         .nav-button:hover {
             background: #1f4b6e;
             border-color: #ffd966;
-            transform: scale(1.02);
         }
 
-        /* hero section (start page) */
+        /* hero section */
         .hero-moe {
             background: linear-gradient(115deg, #ffffffd9 0%, #f4faffd9 100%), url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%225%22 y=%2220%22 font-size=%2218%22 fill=%22%231e3c5c10%22>وزارة التربية</text><text x=%2260%22 y=%2280%22 font-size=%2224%22 fill=%22%231e3c5c10%22>العراقية</text></svg>');
-            background-size: cover;
-            border-radius: 50px;
+            border-radius: 60px;
             padding: 60px 50px;
             margin-bottom: 45px;
             box-shadow: 0 20px 40px rgba(12, 40, 60, 0.25);
@@ -136,21 +120,15 @@
         }
 
         .hero-content h2 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 700;
             color: #073b4e;
-            line-height: 1.3;
-        }
-
-        .hero-content h2 i {
-            color: #b68b40;
-            margin-left: 12px;
         }
 
         .hero-stats {
             display: flex;
             gap: 35px;
-            margin: 40px 0 20px;
+            margin: 40px 0;
             flex-wrap: wrap;
         }
 
@@ -178,8 +156,7 @@
             display: inline-flex;
             align-items: center;
             gap: 25px;
-            font-size: 1.4rem;
-            margin-top: 25px;
+            font-size: 1.3rem;
             border: 1px solid #ffd966;
         }
 
@@ -187,21 +164,21 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin: 60px 0 30px;
+            margin: 60px 0;
         }
 
         .feature-card {
             background: white;
             padding: 40px 30px;
-            border-radius: 40px;
+            border-radius: 45px;
             text-align: center;
-            transition: all 0.25s;
+            transition: 0.25s;
             border: 1px solid #c3d9eb;
             box-shadow: 0 16px 30px -14px #1e3c5c33;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: #9f7e4c;
         }
 
@@ -211,21 +188,16 @@
             margin-bottom: 25px;
         }
 
-        .feature-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
         .btn-primary {
             background: #1f4b6e;
             border: none;
             color: white;
-            padding: 20px 60px;
-            border-radius: 70px;
-            font-size: 1.7rem;
+            padding: 22px 70px;
+            border-radius: 80px;
+            font-size: 1.8rem;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 14px 25px #0a3143;
+            box-shadow: 0 14px 30px #0a3143;
             transition: 0.2s;
             border: 1px solid #5982a3;
             display: inline-flex;
@@ -235,11 +207,10 @@
 
         .btn-primary:hover {
             background: #123a52;
-            box-shadow: 0 10px 30px #022b40;
             transform: scale(1.02);
         }
 
-        /* ===== data page styles (elevated) ===== */
+        /* ===== DATA PAGE STYLES ===== */
         .data-header {
             display: flex;
             justify-content: space-between;
@@ -256,11 +227,10 @@
             border: none;
             color: white;
             padding: 12px 35px;
-            border-radius: 50px;
+            border-radius: 60px;
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
-            transition: 0.15s;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -270,43 +240,51 @@
             background: #173f5c;
         }
 
+        /* form panel */
         .form-panel {
             background: #ffffffed;
             backdrop-filter: blur(6px);
             border-radius: 48px;
-            padding: 30px;
-            margin-bottom: 40px;
+            padding: 35px 30px;
+            margin-bottom: 30px;
             border: 1px solid #ffffff;
-            box-shadow: 0 22px 40px -15px #1f3a4b;
+            box-shadow: 0 22px 48px -18px #14384d;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1d4c6e;
+            margin-bottom: 30px;
+            border-right: 8px solid #ffbf5e;
+            padding-right: 20px;
         }
 
         .field-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
         }
 
         .input-group {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
         }
 
         .input-group label {
             font-weight: 700;
             color: #1e3c5c;
             font-size: 0.95rem;
-            margin-right: 10px;
+            margin-right: 12px;
         }
 
         .input-group input, .input-group select {
             background: white;
-            border: 1.5px solid #cbdae7;
-            border-radius: 28px;
-            padding: 12px 20px;
-            font-size: 0.95rem;
+            border: 1.8px solid #cbdae7;
+            border-radius: 30px;
+            padding: 14px 20px;
             font-family: 'Cairo', sans-serif;
-            transition: 0.2s;
         }
 
         .input-group input:focus, .input-group select:focus {
@@ -319,42 +297,81 @@
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin: 30px 0 10px;
+            margin: 40px 0 10px;
             flex-wrap: wrap;
         }
 
         .btn-save {
-            background: #1a5235;
+            background: #1a6e4a;
             border: none;
             color: white;
-            padding: 14px 50px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            box-shadow: 0 8px 18px #1b4b2e;
+            padding: 16px 60px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            box-shadow: 0 10px 22px #16633d;
             cursor: pointer;
-            transition: 0.15s;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .btn-reset {
             background: #5f6c7a;
             border: none;
             color: white;
-            padding: 14px 40px;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            padding: 16px 50px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* search bar - now above the grid only (moved from form area) */
+        .grid-search-section {
+            background: #ffffffed;
+            border-radius: 70px;
+            padding: 15px 30px;
+            margin: 25px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            border: 1px solid white;
+            box-shadow: 0 8px 22px -10px #173e58;
+        }
+
+        .grid-search-input {
+            flex: 1;
+            min-width: 260px;
+            border: none;
+            background: #f0f7fe;
+            padding: 16px 28px;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-family: 'Cairo', sans-serif;
+            border: 1px solid #bdd3e8;
+        }
+        .grid-search-input:focus {
+            outline: 2px solid #2f6f9f;
+        }
+        .grid-search-clear {
+            background: #b4c8da;
+            border: none;
+            border-radius: 60px;
+            padding: 12px 32px;
+            font-weight: 600;
             cursor: pointer;
         }
 
         .table-wrapper {
             overflow-x: auto;
             background: #ffffffde;
-            border-radius: 40px;
+            border-radius: 45px;
             padding: 5px;
-            box-shadow: 0 20px 40px -10px #173045;
+            box-shadow: 0 22px 45px -16px #102e41;
             border: 1px solid white;
         }
 
@@ -362,7 +379,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.9rem;
-            min-width: 1700px;
+            min-width: 1800px;
         }
 
         th {
@@ -382,36 +399,34 @@
         }
 
         .delete-btn {
-            background: #b53b3b;
+            background: #b14141;
             color: white;
             border: none;
             border-radius: 40px;
             padding: 6px 20px;
             font-weight: 600;
             cursor: pointer;
-            transition: 0.1s;
         }
-
         .delete-btn:hover {
-            background: #831f1f;
+            background: #871f1f;
         }
 
         .footer-note {
-            margin-top: 20px;
-            color: #1f4b6e;
+            margin-top: 25px;
+            color: #1f5777;
             font-weight: 500;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- ========== START PAGE (الرئيسية) ========== -->
+    <!-- ========== صفحة الترحيب (الرئيسية) ========== -->
     <div id="start-page">
         <div class="iraq-header">
             <div class="logo-area">
                 <i class="fas fa-landmark logo-icon"></i>
                 <div class="ministry-title">
-                    <h1>وزارة التربية العراقية <span>جمهورية العراق – مجلس الوزراء</span></h1>
+                    <h1>وزارة التربية العراقية <span>جمهورية العراق – الأمانة العامة</span></h1>
                 </div>
             </div>
             <div class="nav-button" id="goToDataBtnStart">
@@ -426,7 +441,7 @@
                 <div class="hero-stats">
                     <div class="stat-item"><i class="fas fa-user-graduate"></i> أكثر من 450,000 تدريسي</div>
                     <div class="stat-item"><i class="fas fa-school"></i> 32,000 مدرسة ومعهد</div>
-                    <div class="stat-item"><i class="fas fa-scroll"></i> توثيق معتمد منذ ٢٠٠٣</div>
+                    <div class="stat-item"><i class="fas fa-scroll"></i> توثيق معتمد</div>
                 </div>
                 <div class="guide-badge">
                     <i class="fas fa-database"></i>
@@ -439,17 +454,17 @@
             <div class="feature-card">
                 <i class="fas fa-id-card-alt"></i>
                 <h3>بيانات شاملة</h3>
-                <p>الاسم الرباعي، أسماء الأجداد، الأم، الجنس، التخصص العام والدقيق، الجهات المانحة، تواريخ المنح.</p>
+                <p>الأسم الأول، أسم الأب، أسم الجد، والد الجد، اللقب، الجنس، أسماء الأمهات، الجنسية، القسم ...</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-laptop-medical"></i>
                 <h3>حفظ محلي متين</h3>
-                <p>IndexedDB – تعمل بدون إنترنت، بياناتك تبقى في جهازك بأمان تام.</p>
+                <p>IndexedDB – تعمل بدون إنترنت، بياناتك تبقى في جهازك.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-table"></i>
-                <h3>27 حقلاً مخصصاً</h3>
-                <p>مرتبة حسب طلب الوزارة: الأسم الأول، أسم الأب، أسم الجد، والد الجد، اللقب، الجنس ... حتى الشهادة (مكرر)</p>
+                <h3>24 حقلاً</h3>
+                <p>مرتبة حسب الطلب النهائي مع بحث فوق الجدول.</p>
             </div>
         </div>
 
@@ -459,10 +474,9 @@
                 الانتقال إلى قاعدة التدريسيين
             </button>
         </div>
-        <div style="height: 30px;"></div>
     </div>
 
-    <!-- ========== DATA PAGE (صفحة الإدخال والجدول) ========== -->
+    <!-- ========== صفحة البيانات (الإدخال + الجدول) ========== -->
     <div id="data-page">
         <div class="data-header">
             <div style="display: flex; align-items: center; gap: 25px;">
@@ -472,56 +486,53 @@
             <button class="back-btn" id="backToStartBtn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</button>
         </div>
 
-        <!-- form panel -->
+        <!-- نموذج الإدخال (بدون بحث) -->
         <div class="form-panel">
-            <div class="field-grid" id="inputFieldsContainer"></div>
+            <div class="section-title"><i class="fas fa-pen-alt"></i> بيانات التدريسي (الترتيب النهائي)</div>
+            <div class="field-grid" id="fieldsContainer"></div>
             <div class="action-buttons">
                 <button class="btn-save" id="saveBtn"><i class="fas fa-save"></i> حفظ في السجل المحلي</button>
-                <button class="btn-reset" id="resetBtn"><i class="fas fa-undo-alt"></i> إعادة تعيين</button>
+                <button class="btn-reset" id="resetBtn"><i class="fas fa-undo-alt"></i> إعادة ضبط الحقول</button>
             </div>
         </div>
 
-        <!-- table display -->
+        <!-- 🔍 شريط البحث – الآن فوق الجدول فقط (وليس فوق الحقول) -->
+        <div class="grid-search-section">
+            <i class="fas fa-search" style="font-size:1.8rem; color:#0f4b6e;"></i>
+            <input type="text" id="gridSearchInput" class="grid-search-input" placeholder="ابحث باسم التدريسي (الأول، الأب، الجد، والد الجد، اللقب)">
+            <button id="gridClearSearch" class="grid-search-clear"><i class="fas fa-times"></i> مسح</button>
+        </div>
+
+        <!-- الجدول -->
         <div class="table-wrapper">
             <table id="dataTable">
                 <thead id="tableHeader"></thead>
-                <tbody id="tableBody"><tr><td colspan="30" style="text-align:center; padding:40px;">يرجى الانتظار ...</td></tr></tbody>
+                <tbody id="tableBody"><tr><td colspan="40" style="text-align:center; padding:40px;">تحميل البيانات...</td></tr></tbody>
             </table>
         </div>
         <div class="footer-note">
-            <i class="fas fa-shield-alt"></i> التخزين في IndexedDB (local database) – البيانات لا تغادر متصفحك.
+            <i class="fas fa-shield-alt"></i> التخزين في IndexedDB · البحث يعمل على الأسماء الخمسة الأولى.
         </div>
     </div>
 </div>
 
 <script>
     (function() {
-        // ========== FIELDS ORDER (exactly as requested, with duplicate الشهادة) ==========
+        // ========== قائمة الحقول النهائية (24 حقلاً) ==========
         const FIELDS = [
             "الأسم الأول", "أسم الأب", "أسم الجد", "أسم والد الجد", "اللقب", "الجنس",
-            "أسم جد الأم", "أسم أب الأم", "أسم الأم", "القسم", "الجنسية", "البلد المانح",
-            "تاريخ منح اللقب الخاص بالتدريسي", "رقم الموبايل", "القسم المانح", "التخصص العام",
-            "الجامعة المانحة للقب او العنوان", "التخصص الدقيق", "اللقب العلمي", "تاريخ منح",
-            "الخاص", "الموبايل", "الشهادة تاريخ الحصول على", "الكلية المانحة", "الشهادة", "الشهادة"
+            "أسم الأم", "أسم أب الأم", "أسم جد الأم", "الجنسية", "القسم",
+            "تاريخ منح اللقب الخاص بالتدريسي", "البلد المانح", "الجامعة المانحة للقب او العنوان",
+            "الكلية المانحة", "القسم المانح", "التخصص العام", "التخصص الدقيق", "اللقب العلمي",
+            "تاريخ منح اللقب", "الشهادة تاريخ الحصول على", "الشهادة", "الموبايل", "رقم الموبايل"
         ];
 
-        // table headers (second duplicate marked)
         const TABLE_HEADERS = [...FIELDS];
-        let cnt = {};
-        for (let i = 0; i < TABLE_HEADERS.length; i++) {
-            let h = TABLE_HEADERS[i];
-            if (cnt[h]) {
-                cnt[h]++;
-                TABLE_HEADERS[i] = h + " (٢)";
-            } else {
-                cnt[h] = 1;
-            }
-        }
 
         // ========== IndexedDB ==========
-        const DB_NAME = 'EducatorsDB';
+        const DB_NAME = 'EducatorsFinalDB';
         const STORE_NAME = 'educators';
-        const DB_VERSION = 3;
+        const DB_VERSION = 1;
 
         function openDB() {
             return new Promise((resolve, reject) => {
@@ -575,8 +586,8 @@
             });
         }
 
-        // ========== BUILD FORM FIELDS with col_ indexes ==========
-        const container = document.getElementById('inputFieldsContainer');
+        // ========== بناء النموذج ==========
+        const container = document.getElementById('fieldsContainer');
         function buildForm() {
             container.innerHTML = '';
             FIELDS.forEach((label, idx) => {
@@ -589,8 +600,7 @@
                 if (label === 'الجنس') {
                     input = document.createElement('select');
                     input.id = `col_${idx}`;
-                    input.name = `col_${idx}`;
-                    input.innerHTML = `<option value="ذكر">ذكر</option><option value="أنثى">أنثى</option>`;
+                    input.innerHTML = `<option value="">-- اختر --</option><option value="ذكر">ذكر</option><option value="أنثى">أنثى</option>`;
                 } else {
                     input = document.createElement('input');
                     input.type = 'text';
@@ -623,19 +633,32 @@
             });
         }
 
-        // ========== RENDER TABLE ==========
+        // ========== البحث (مربط بشريط البحث الخاص بالجدول) ==========
+        let currentSearchTerm = '';
+
         async function renderTable() {
             const thead = document.getElementById('tableHeader');
             const tbody = document.getElementById('tableBody');
             try {
                 const records = await getAllRecords();
                 thead.innerHTML = '<tr>' + TABLE_HEADERS.map(h => `<th>${h}</th>`).join('') + '<th>إجراء</th></tr>';
-                if (records.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="${TABLE_HEADERS.length+1}" style="text-align:center; padding:40px;">لا يوجد تدريسيون بعد ...</td></tr>`;
+
+                const term = currentSearchTerm.trim().toLowerCase();
+                const filtered = term === '' ? records : records.filter(rec => {
+                    for (let idx of [0,1,2,3,4]) {
+                        const val = (rec[`col_${idx}`] || '').toLowerCase();
+                        if (val.includes(term)) return true;
+                    }
+                    return false;
+                });
+
+                if (filtered.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="${TABLE_HEADERS.length+1}" style="text-align:center; padding:40px;">لا يوجد تدريسيون مطابقين</td></tr>`;
                     return;
                 }
+
                 let rows = '';
-                records.forEach(rec => {
+                filtered.forEach(rec => {
                     rows += '<tr>';
                     for (let i = 0; i < FIELDS.length; i++) {
                         rows += `<td>${rec[`col_${i}`] || ''}</td>`;
@@ -643,21 +666,51 @@
                     rows += `<td><button class="delete-btn" data-id="${rec.id}"><i class="fas fa-trash-alt"></i> حذف</button></td></tr>`;
                 });
                 tbody.innerHTML = rows;
+
                 document.querySelectorAll('.delete-btn').forEach(btn => {
                     btn.addEventListener('click', async (e) => {
                         const id = Number(e.currentTarget.getAttribute('data-id'));
-                        if (confirm('تأكيد حذف هذا التدريسي من السجل المحلي؟')) {
+                        if (confirm('حذف هذا التدريسي نهائياً؟')) {
                             await deleteRecord(id);
                             renderTable();
                         }
                     });
                 });
             } catch (err) {
-                tbody.innerHTML = `<tr><td colspan="30">خطأ: ${err}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="40">خطأ: ${err}</td></tr>`;
             }
         }
 
-        // ========== PAGE NAVIGATION ==========
+        // ========== أزرار وانتقال ==========
+        document.getElementById('saveBtn').addEventListener('click', async () => {
+            const data = getFormObject();
+            try {
+                await saveRecord(data);
+                resetForm();
+                renderTable();
+            } catch (e) {
+                alert('خطأ: ' + e);
+            }
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', resetForm);
+
+        // البحث الآن عنصرين خاصين بالجدول
+        const gridSearch = document.getElementById('gridSearchInput');
+        const gridClear = document.getElementById('gridClearSearch');
+
+        gridSearch.addEventListener('input', (e) => {
+            currentSearchTerm = e.target.value;
+            renderTable();
+        });
+
+        gridClear.addEventListener('click', () => {
+            gridSearch.value = '';
+            currentSearchTerm = '';
+            renderTable();
+        });
+
+        // ========== التنقل بين الصفحات ==========
         const startPage = document.getElementById('start-page');
         const dataPage = document.getElementById('data-page');
 
@@ -669,31 +722,16 @@
         function showData() {
             startPage.style.display = 'none';
             dataPage.style.display = 'block';
-            renderTable(); // refresh when showing data page
+            renderTable();
         }
 
         document.getElementById('goToDataBtnStart').addEventListener('click', showData);
         document.getElementById('enterDataBtn').addEventListener('click', showData);
         document.getElementById('backToStartBtn').addEventListener('click', showStart);
 
-        // ========== SAVE / RESET ==========
-        document.getElementById('saveBtn').addEventListener('click', async () => {
-            const data = getFormObject();
-            try {
-                await saveRecord(data);
-                resetForm();
-                renderTable();
-            } catch (e) {
-                alert('خطأ بالحفظ: ' + e);
-            }
-        });
-
-        document.getElementById('resetBtn').addEventListener('click', resetForm);
-
-        // pre-render table for fast view (data page hidden initially)
+        // تحميل أولي
         renderTable();
     })();
 </script>
-<!-- نهاية المشروع – صفحتان بتصميم احترافي تربوي -->
 </body>
 </html>
